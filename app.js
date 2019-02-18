@@ -9,7 +9,7 @@ app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
-mongoose.connect("mongodb://cluster0-shard-00-00-bqbq4.mongodb.net:27017" || process.env.MONGOLAB_URI  || process.env.MONGOHQ_URL || process.env.MONGODB_URI);
+mongoose.connect("mongodb://localhost/dairy_db");
 
 //MONGOOSE/MODEL CONFIG
 var appSchema= new mongoose.Schema(
