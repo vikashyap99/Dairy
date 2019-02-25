@@ -13,7 +13,8 @@ app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
-mongoose.connect("mongodb://localhost/dairy_db");
+var uri = 'mongodb+srv://prem:prem@cluster0-bqbq4.mongodb.net/dairy_db?retryWrites=true';
+mongoose.connect(uri).catch((error) => { console.log(error); });
 
 // Passport authentication
 
