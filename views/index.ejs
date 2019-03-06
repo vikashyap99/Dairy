@@ -1,0 +1,17 @@
+<% include ./partials/header  %>
+
+
+<div class="container">
+
+<% for(var i=0;i<customers.length;i++){ %>
+		<div>
+			<h2><%=customers[i].name%> </h2>
+			<form action="/customers/<%= customers[i]._id %>" method="GET">
+				<button class="btn btn-primary btn-lg" >VIEW MORE</button>
+			</form>
+
+		</div>
+
+<%} %>	
+</div>	
+<% include ./partials/footer  %>

@@ -1,0 +1,16 @@
+<% include ./partials/header %>
+	<div class="container">
+		<div>
+			<h1>NAME: <%= customer.name %></h1>
+		</div>
+		<div>
+			<h1>PHONE NUMBER : <%= customer.phoneNumber %></h1>
+		</div>
+		<form action="/customers/<%=customer._id %>/edit" method="GET">
+				<button class="btn btn-primary btn-lg">EDIT</button>
+		</form>
+		<form action="/customers/<%=customer._id %>?_method=DELETE" method="POST">
+				<button class="btn btn-primary btn-lg" >DELETE</button>
+		</form>
+	</div>
+<% include ./partials/footer %>
